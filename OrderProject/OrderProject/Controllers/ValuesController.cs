@@ -37,7 +37,7 @@ namespace OrderProject.Controllers
             var status= new OrderService();
             status.ChangeStatus(orderinfo);
 
-            return Ok(status.GetOrderList(AccountUID));
+            return Ok("ok");
         }
     }
 }

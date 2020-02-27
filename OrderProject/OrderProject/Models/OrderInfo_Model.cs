@@ -8,9 +8,10 @@ namespace OrderProject.Models
     public class OrderInfo_Model
     {
         public string OrderUID { get; set; }
-        public string Pname { get; set; }
+        public string PName { get; set; }
         public int Price { get; set; }
         public int Cost { get; set; }
         public string OrderStatus { get; set; }
+        public string ProductUID { get; set; }
     }
 }

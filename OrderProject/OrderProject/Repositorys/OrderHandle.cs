@@ -23,7 +23,7 @@ namespace OrderProject.Repositorys
         }
         public List<OrderInfo_Model> Get_OrderList(string AccountUID)
         {
-            string strSQL = $@"select Product.PName,Product.Price,Product.Cost,OrderInfo.OrderStatus,OrderInfo.OrderUID from OrderInfo
+            string strSQL = $@"select Product.PName,Product.Price,Product.Cost,OrderInfo.OrderStatus,OrderInfo.OrderUID,OrderInfo.ProductUID from OrderInfo
                             left join Product on OrderInfo.ProductUID=Product.ProductUID where OrderInfo.AccountUID='{AccountUID}' order by Product.PName";
             using (var conn = new SqlConnection(strconn))
             {
