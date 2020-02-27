@@ -31,8 +31,8 @@ namespace OrderProject.Controllers
 
         }
         [HttpPost]
-        [Route("shipped/{AccountUID}")]
-        public virtual IHttpActionResult TO_be_shipped(string AccountUID,List<OrderInfo_Model> orderinfo)
+        [Route("shipped")]
+        public virtual IHttpActionResult TO_be_shipped(List<OrderInfo_Model> orderinfo)
         {
             var status= new OrderService();
             status.ChangeStatus(orderinfo);
